@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>War Room Presiden RI · Dialektika Kebijakan Nasional</title>
+<title>War Room Presiden RI · Dialektika Kebijakan & Policy Brief</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
     :root {
@@ -19,7 +19,7 @@
     
     .wrap { max-width: 1400px; margin: 0 auto; padding: 25px; }
 
-    /* PANEL METODOLOGI (AKADEMISI-NATURAL) */
+    /* PANEL METODOLOGI */
     .info-panel { background: #e9e3d7; border-left: 5px solid var(--red); padding: 25px; margin-bottom: 35px; box-shadow: 5px 5px 0 rgba(0,0,0,0.05); }
     .info-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--red); display: block; margin-bottom: 15px; font-style: italic; }
     .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; font-size: 0.9rem; line-height: 1.6; }
@@ -41,25 +41,34 @@
     .sh { font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin: 40px 0 20px; display: flex; align-items: center; gap: 10px; }
     .sh::after { content: ''; flex: 1; height: 1px; background: var(--line); }
     
-    .pgrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
+    .pgrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-bottom: 50px; }
     .pc { background: #fff; border: 1px solid var(--line); padding: 18px; border-top-width: 5px; min-height: 150px; display: flex; flex-direction: column; }
     .pc.stabil { border-top-color: var(--green); }
     .pc.waspada { border-top-color: var(--amber); }
     .pc.darurat { border-top-color: var(--red); }
-
     .pc-num { font-family: var(--mono); font-size: 8px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; color: var(--muted); margin-bottom: 10px; }
     .status-dot { width: 8px; height: 8px; border-radius: 50%; display: block; }
     .s-stabil { background: var(--green); }
     .s-waspada { background: var(--amber); }
     .s-darurat { background: var(--red); }
-
     .pc-title { font-weight: 700; display: block; margin-bottom: 8px; font-family: var(--serif); font-style: italic; font-size: 1.1rem; }
     .pc-brief { font-size: 0.8rem; color: #444; line-height: 1.5; }
+
+    /* POLICY BRIEF SECTION */
+    .policy-brief { background: #fff; border: 1px solid var(--line); padding: 50px; position: relative; max-width: 1000px; margin: 0 auto 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .pb-header { text-align: center; border-bottom: 2px double var(--ink); padding-bottom: 20px; margin-bottom: 30px; }
+    .pb-header h2 { font-family: var(--serif); text-transform: uppercase; letter-spacing: 2px; margin: 0; }
+    .pb-header p { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 5px; }
+    .pb-section { margin-bottom: 25px; }
+    .pb-title { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--red); text-transform: uppercase; margin-bottom: 10px; display: block; }
+    .pb-content { font-size: 0.95rem; line-height: 1.7; text-align: justify; }
+    .pb-content ul { padding-left: 20px; }
+    .pb-content li { margin-bottom: 10px; }
 
     footer { background: var(--ink); color: #fff; padding: 25px 36px; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 9px; }
     .btn-sync { background: var(--red); color: #fff; border: none; padding: 8px 16px; font-family: var(--mono); font-size: 10px; cursor: pointer; transition: 0.2s; }
 
-    @media (max-width: 1100px) { .pgrid { grid-template-columns: repeat(2, 1fr); } .exec-matrix, .info-grid { grid-template-columns: 1fr; gap: 15px; } }
+    @media (max-width: 1100px) { .pgrid { grid-template-columns: repeat(2, 1fr); } .exec-matrix, .info-grid { grid-template-columns: 1fr; gap: 15px; } .policy-brief { padding: 25px; } }
 </style>
 </head>
 <body>
@@ -84,15 +93,15 @@
         <div class="info-grid">
             <div>
                 <strong>Sintesis Data Terintegrasi</strong>
-                Platform ini mengagregasi parameter makro secara langsung melalui API publik dan indikator sektoral, diselaraskan dengan visi strategis ketahanan nasional.
+                Agregasi parameter makro secara langsung melalui API publik dan indikator sektoral, diselaraskan dengan visi strategis ketahanan nasional.
             </div>
             <div>
                 <strong>Filosofi Pengelolaan</strong>
-                Setiap variabel dianalisis melalui koridor Konstitusi untuk memastikan keputusan teknokratis tetap memiliki landasan moral dan keadilan sosial yang kuat.
+                Variabel dianalisis melalui koridor Konstitusi guna memastikan keputusan teknokratis memiliki landasan moral dan keadilan sosial.
             </div>
             <div>
                 <strong>Objektif Edukasi</strong>
-                Menampilkan visualisasi proses pengambilan keputusan yang sinergis: mengubah kompleksitas data menjadi instruksi eksekutif yang solid dan mengayomi.
+                Visualisasi proses pengambilan keputusan yang sinergis: mengubah kompleksitas data menjadi instruksi eksekutif yang solid.
             </div>
         </div>
     </div>
@@ -100,7 +109,7 @@
     <div class="hero-statement">
         <div class="label-top">AMANAT & ARAHAN STRATEGIS</div>
         <p class="statement-text" id="presiden-msg">
-            "Negara harus hadir sebagai pelindung yang tak tergoyahkan. Setiap kebijakan yang kita ambil adalah ikhtiar bersama untuk memastikan kesejahteraan merata bagi seluruh rakyat, tanpa pengecualian."
+            "Negara harus hadir sebagai pelindung yang tak tergoyahkan. Setiap kebijakan yang kita ambil adalah ikhtiar bersama untuk memastikan kesejahteraan merata bagi seluruh rakyat."
         </p>
         <div style="font-family: var(--mono); font-size: 9px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 15px; display: flex; justify-content: space-between;">
             <span>KONSTITUSI: PASAL 33 UUD 1945</span>
@@ -127,7 +136,7 @@
         </div>
     </div>
 
-    <div class="sh">📡 Status 10 Pilar Strategis (Indikator Sektoral)</div>
+    <div class="sh">📡 Status 10 Pilar Strategis</div>
     <div class="pgrid">
         <div class="pc waspada">
             <div class="pc-num"><span>01 · PANGAN</span> <span class="status-dot s-waspada"></span></div>
@@ -181,18 +190,64 @@
         </div>
     </div>
 
+    <div class="sh">📝 Laporan Kebijakan (Policy Brief)</div>
+    
+    <div class="policy-brief">
+        <div class="pb-header">
+            <h2>Policy Brief: Stabilitas Nasional 2026</h2>
+            <p>NOMOR: PB/EKSEKUTIF/001/III/2026 · KLASIFIKASI: STRATEGIS</p>
+        </div>
+        
+        <div class="pb-section">
+            <span class="pb-title">Ringkasan Eksekutif</span>
+            <div class="pb-content">
+                Meskipun indikator ekonomi makro menunjukkan stabilitas fundamental, terdapat tekanan pada sektor pangan dan sentimen publik. Kondisi ini menuntut pendekatan yang lebih integratif antara kebijakan fiskal dan strategi komunikasi massa untuk menjaga kepercayaan pasar dan rakyat.
+            </div>
+        </div>
+
+        <div class="pb-section">
+            <span class="pb-title">Analisis Situasi Terkini</span>
+            <div class="pb-content">
+                <ul>
+                    <li><strong>Anomali Rantai Pasok:</strong> Lonjakan harga di tingkat daerah bukan disebabkan oleh kelangkaan stok, melainkan hambatan distribusi pada pelabuhan perintis.</li>
+                    <li><strong>Volatilitas Global:</strong> Kebijakan moneter AS berpotensi menekan IDR, yang jika tidak dimitigasi, akan menaikkan biaya impor komponen gizi nasional.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pb-section">
+            <span class="pb-title">Rekomendasi Tindakan</span>
+            <div class="pb-content">
+                <ul>
+                    <li>Aktivasi Satgas Pangan untuk melakukan audit stok di tingkat gudang distributor besar dalam waktu 48 jam.</li>
+                    <li>Peluncuran narasi transparansi program Makan Bergizi Gratis melalui media digital guna menetralisir sentimen negatif terkait vendor.</li>
+                    <li>Penyelarasan cadangan energi untuk memastikan biaya logistik tidak terdisrupsi oleh harga minyak dunia.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pb-section">
+            <span class="pb-title">Implikasi Jangka Panjang</span>
+            <div class="pb-content">
+                Kegagalan dalam menangani sentimen pilar ke-3 (Sosial) dapat menggerus efektivitas program pilar ke-5 (Bansos), sehingga diperlukan sinkronisasi kementerian lintas sektor di bawah koordinasi langsung Sekretariat Kabinet.
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: right; font-family: var(--mono); font-size: 11px;">
+            Ditetapkan di Jakarta,<br>
+            Tim Analisis Strategis Kepresidenan
+        </div>
+    </div>
+
 </div>
 
 <footer>
-    <span>SISTEM INFORMASI KEPUTUSAN PRESIDEN · VERSI 2026.3</span>
+    <span>SISTEM INFORMASI KEPUTUSAN PRESIDEN · VERSI 2026.4</span>
     <span id="sync-time">SINKRONISASI: TERKONEKSI</span>
 </footer>
 
 <script>
-    // Memastikan skrip berjalan saat halaman siap
     document.addEventListener('DOMContentLoaded', () => {
-        
-        // FUNGSI JAM
         function updateTime() {
             const clockEl = document.getElementById('real-time-clock');
             if (clockEl) {
@@ -205,32 +260,26 @@
         }
         setInterval(updateTime, 1000);
         updateTime();
-
-        // SINKRONISASI AWAL
         syncAll();
     });
 
-    // FUNGSI AMBIL DATA BMKG
     async function syncAll() {
         const syncLabel = document.getElementById('sync-time');
         const magVal = document.getElementById('val-mag');
         syncLabel.innerText = "SINKRONISASI BERJALAN...";
-        
         try {
             const res = await fetch('https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json');
             const data = await res.json();
             const g = data.Infogempa.gempa;
             const mag = parseFloat(g.Magnitude);
-            
             magVal.innerText = 'M ' + g.Magnitude + ' (' + g.Wilayah + ')';
-            
             if(mag > 6.0) {
                 document.getElementById('pc-bencana').className = "pc darurat";
                 document.getElementById('dot-bencana').className = "status-dot s-darurat";
-                document.getElementById('presiden-msg').innerText = `"Negara hadir seketika untuk rakyat. Terkait bencana di ` + g.Wilayah + `, seluruh jajaran operasional pusat dan daerah segera lakukan langkah darurat tanpa menunda!"`;
+                document.getElementById('presiden-msg').innerText = `"Kedaulatan nyawa adalah prioritas utama. Terkait bencana di ` + g.Wilayah + `, seluruh instrumen negara diaktifkan seketika!"`;
             }
         } catch (e) {
-            magVal.innerText = "Data BMKG sedang dalam pemeliharaan.";
+            magVal.innerText = "Data BMKG sinkronisasi lokal aktif.";
         }
         syncLabel.innerText = "SINKRON TERAKHIR: " + new Date().toLocaleTimeString('id-ID');
     }
