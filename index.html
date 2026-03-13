@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>War Room Presiden RI · Transparansi Kebijakan</title>
+<title>War Room Presiden RI · Kebijakan Berlandaskan Konstitusi</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -14,155 +14,20 @@
   --serif:'Playfair Display',Georgia,serif;
   --sans:'IBM Plex Sans',system-ui,sans-serif;
 }
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;overflow-x:hidden}
-.top-bar{height:6px;background:linear-gradient(90deg, var(--red) 50%, #fff 50%)}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;margin:0}
+.top-bar{height:6px;background:linear-gradient(90deg, var(--red) 50%, #fff 50%); position: sticky; top:0; z-index:100}
 
-header{padding:24px 36px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:#fff}
-.h-tag{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:8px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:bl 2s infinite}
-@keyframes bl{0%,100%{opacity:1}50%{opacity:.3}}
-h1{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700}
-h1 b{color:var(--red)}
+/* HEADER SECTION */
+header{padding:20px 36px; border-bottom:1px solid var(--line); background:#fff; display:flex; justify-content:space-between; align-items:center}
+.h-left h1{font-family:var(--serif); font-size:clamp(1.4rem, 3vw, 2rem); font-weight:700; margin:0}
+.h-left h1 b{color:var(--red); font-style: italic;}
+.h-meta{text-align:right; font-family:var(--mono); font-size:10px}
+#real-time-clock { font-weight: 700; color: var(--ink); letter-spacing: 0.5px; }
 
-.wrap{max-width:1400px;margin:0 auto;padding:24px 36px 80px}
-.sh{font-family:var(--mono);font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:30px 0 15px;display:flex;align-items:center;gap:10px}
-.sh::after{content:'';flex:1;height:1px;background:var(--line)}
+/* REFRESH COMPONENT */
+.btn-refresh{background:var(--ink); color:#fff; border:none; padding:10px 18px; font-family:var(--mono); font-size:9px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; margin-top:10px; transition:0.2s; font-weight: 700;}
+.btn-refresh:hover{background:var(--red); transform: translateY(-1px);}
+.btn-refresh:active{transform: translateY(0);}
 
-/* PERSPECTIVE MATRIX */
-.pm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:20px}
-.pm-card{background:#fff;border:1px solid var(--line);padding:15px;position:relative;overflow:hidden}
-.pm-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%}
-.pm-uni::before{background:var(--blue)}
-.pm-aso::before{background:var(--amber)}
-.pm-glo::before{background:var(--green)}
-.pm-lbl{font-family:var(--mono);font-size:7px;font-weight:700;margin-bottom:8px;display:block}
-.pm-txt{font-size:0.85rem;font-weight:600;line-height:1.4;color:#444}
-
-/* DECISION ENGINE */
-.dbox{border:2px solid var(--ink);display:grid;grid-template-columns:1fr 350px;background:#fff}
-.dm{padding:30px;border-right:2px solid var(--ink)}
-.dtag{font-family:var(--mono);font-size:8px;font-weight:700;padding:4px 12px;border-radius:2px;display:inline-block;margin-bottom:15px;border:1px solid currentColor}
-.crit{color:var(--red);background:#fde8eb}
-.warn{color:var(--amber);background:#fff4e0}
-#dt{font-family:var(--serif);font-size:1.8rem;font-weight:700;margin-bottom:12px;line-height:1.1}
-#db{font-size:1rem;line-height:1.6;color:#333;margin-bottom:20px;padding-left:20px;border-left:4px solid var(--red)}
-#il{list-style:none;display:flex;flex-direction:column;gap:10px}
-#il li{font-size:0.95rem;font-weight:700;display:flex;gap:12px;align-items:flex-start}
-#il li::before{content:'GA/2026/01';font-family:var(--mono);font-size:7px;background:var(--ink);color:#fff;padding:2px 4px;margin-top:4px}
-
-.ds{padding:25px;background:var(--cream);display:flex;flex-direction:column;gap:20px}
-.stat-box{border-bottom:1px solid var(--line);padding-bottom:15px}
-.stat-lbl{font-family:var(--mono);font-size:7px;font-weight:700;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:5px}
-.stat-val{font-size:0.9rem;font-weight:700;color:var(--ink)}
-
-/* PILLARS */
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.pc{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px;background:#fff;transition:0.2s}
-.pc:hover{background:var(--cream)}
-.ps{font-size:0.85rem;line-height:1.6;margin-top:15px;padding:12px;background:#f9f9f9;border:1px solid var(--line);color:#444}
-
-footer{background:var(--ink);color:#fff;padding:20px 36px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:8px;letter-spacing:1px}
-
-@media(max-width:960px){
-  .pm-grid, .dbox, .pgrid {grid-template-columns:1fr}
-  .dm{border-right:none;border-bottom:2px solid var(--ink)}
-}
-</style>
-</head>
-<body>
-<div class="top-bar"></div>
-
-<header>
-  <div>
-    <div class="h-tag"><span class="dot"></span>Sistem Edukasi Kebijakan Publik · Republik Indonesia</div>
-    <h1>War Room <b>Simulasi</b> Presiden</h1>
-  </div>
-  <div style="text-align:right">
-    <div id="clk" style="font-family:var(--mono); font-size:10px; font-weight:700"></div>
-    <div style="font-family:var(--mono); font-size:8px; color:var(--red)">STATUS: LIVE SINKRONISASI</div>
-  </div>
-</header>
-
-<div class="wrap">
-
-  <div class="sh">🔍 Perspective Matrix — Masukan Akademisi & Lembaga</div>
-  <div class="pm-grid">
-    <div class="pm-card pm-uni">
-      <span class="pm-lbl">🏫 KAMPUS (UI/UGM/OXFORD)</span>
-      <p class="pm-txt">"Risiko crowding-out effect: Anggaran MBG dapat menggeser prioritas riset & infrastruktur dasar jika fiskal tidak dikelola dengan ekspansi pajak yang tepat."</p>
-    </div>
-    <div class="pm-card pm-aso">
-      <span class="pm-lbl">💼 ASOSIASI (KADIN/APINDO)</span>
-      <p class="pm-txt">"Daya beli kelas menengah sedang di titik nadir. Kenaikan PPN 12% dan cukai plastik perlu ditunda untuk menjaga momentum konsumsi domestik."</p>
-    </div>
-    <div class="pm-card pm-glo">
-      <span class="pm-lbl">🌏 GLOBAL (IMF/WORLD BANK)</span>
-      <p class="pm-txt">"Indeks kemudahan bisnis Indonesia membaik, namun volatilitas harga komoditas global mengancam surplus neraca perdagangan 2026."</p>
-    </div>
-  </div>
-
-  <div class="sh">⚖ Decision Engine — Arahan & Pertimbangan Presiden</div>
-  <div class="dbox">
-    <div class="dm">
-      <span class="dtag crit">● Fokus Utama: Ketahanan Fiskal & Gizi Nasional</span>
-      <div id="dt">Menyeimbangkan Janji Kampanye & Realita Anggaran</div>
-      <div id="db">Presiden sedang menimbang laporan dari Menteri Keuangan mengenai defisit APBN yang mendekati threshold 3% akibat simultannya proyek IKN dan Makan Bergizi Gratis (MBG).</div>
-      <div class="ilbl" style="font-family:var(--mono); font-size:8px; color:var(--red); margin-bottom:10px; font-weight:700">INSTRUKSI PRESIDEN (HASIL ANALISIS):</div>
-      <ul id="il">
-        <li>Audit ulang vendor penyedia protein MBG untuk cegah kebocoran anggaran.</li>
-        <li>Tunda proyek infrastruktur non-strategis untuk amankan bantalan sosial.</li>
-        <li>Instruksikan Menlu optimalkan diplomasi ekonomi untuk tarik investasi manufaktur.</li>
-      </ul>
-    </div>
-    <div class="ds">
-      <div class="stat-box">
-        <span class="stat-lbl">Tingkat Kepercayaan Publik</span>
-        <div class="stat-val" style="color:var(--green)">68.5% (Trend: Menurun)</div>
-      </div>
-      <div class="stat-box">
-        <span class="stat-lbl">Dilema Saat Ini</span>
-        <div class="stat-val" style="color:var(--red)">Kenaikan Harga Beras vs Subsidi BBM</div>
-      </div>
-      <div class="stat-box">
-        <span class="stat-lbl">Rekomendasi Intelijen</span>
-        <div class="stat-val">Fokus pada stabilitas harga pokok di daerah urban.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sh">📡 Data Realtime & Skimming Sektoral</div>
-  <div class="pgrid">
-    <div class="pc">
-      <span class="pn">Pilar 02 · Moneter</span>
-      <div class="pl">Nilai Tukar Rupiah</div>
-      <div style="height:120px; overflow:hidden; margin:10px 0">
-        <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FX_IDC:USDIDR","width":"100%","height":120,"locale":"id","colorTheme":"light","isTransparent":true}</script></div>
-      </div>
-      <p class="ps"><b>Analisis BI:</b> Rupiah tertekan sentimen *high-for-longer* suku bunga AS. Rekomendasi: Intervensi di pasar spot dan DNDF.</p>
-    </div>
-
-    <div class="pc" style="background:#fffcf5">
-      <span class="pn">Pilar 03 · Sosial</span>
-      <div class="pl">Sentimen Makan Bergizi (MBG)</div>
-      <div style="font-size:1.5rem; font-weight:700; margin:10px 0; color:var(--amber)">Kritis</div>
-      <p class="ps"><b>Skimming Berita:</b> Muncul dugaan pengurangan porsi di beberapa pilot project daerah. Akademisi ingatkan risiko malnutrisi jika standar gizi dilanggar.</p>
-    </div>
-
-    <div class="pc">
-      <span class="pn">Pilar 09 · Kebencanaan</span>
-      <div class="pl">Status Geologi (BMKG)</div>
-      <div id="bmkg-mag" style="font-size:1.5rem; font-weight:700; color:var(--red); margin:10px 0">—</div>
-      <div id="bmkg-loc" style="font-size:0.75rem; color:var(--muted)">Memuat data BMKG...</div>
-      <p class="ps"><b>Protokol:</b> Jika M > 6.5, seluruh agenda kepresidenan dialihkan ke penanganan krisis nasional dalam 2 jam pertama.</p>
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  <span>Pusat Kendali Simulasi Kebijakan RI — RKP 2026</span>
-  <span>ARSIP NEGARA — RAHASIA & TERBATAS</span>
-</footer>
-
-<script>
-const
+.wrap{max-width:1400px; margin:0 auto; padding:20px 36px 80px}
+.sh{font-family:var(--mono); font-size:8px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:30px 0 15px; display:flex; align-items:center; gap:10px}
